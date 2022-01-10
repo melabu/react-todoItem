@@ -1,11 +1,19 @@
+import React from "react";
+import Form from "./components/Form";
+import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 function App(props) {
   const taskList = props.tasks.map(task => (
-    <Todo id={task.id} name={task.name} completed={task.completed} />
-  ));
-  
-  return (
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  )
+);
+return (
     <div className="todoapp stack-large">
       <h1>To-do Item React App</h1>
       <form>
